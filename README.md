@@ -23,7 +23,7 @@ The filtration mechanism performs partial string matches and is not case sensiti
 
 ## The Challenge
 ### Requirement A) “Multi-Field Filtration”
-Project Managers want to filter projects by all three fields in the table: `projectName`, `projectSize` and `projectManager`.
+Project Managers want to filter projects by all three fields in the table: `projectName`, `projectSize` and `projectManagerName`.
 
 ### Requirement B) “Ranked Results”
 Project managers are more interested in projects that belong to them. Although they do want to see projects belonging to others, their own projects should “float to the top” and come first in the filtration results. You do not need to alphabetize or sort the results by any other field.
@@ -42,7 +42,7 @@ Your solution should add no more than 20 lines of code to the file.
 Although everything you need to solve the challenge is already present in the `app.component.ts` file, you should examine its two service dependencies (`projects.service.ts` and `user.service.ts`) to learn more about the data they provide.
 
 #### A. “Multi-Field Filtration” Hint
-Whatever text the user types in the filter field can match any one of the three fields, so you will need to use a logical `or` operation.
+Whatever text the user types in the filter field can match any one of a project’s three string-based properties (`projectName`, `projectSize` and `projectManagerName`) so you will need to use a logical `or` operation.
 
 #### B. “Ranked Results” Hint
 The `UserService` has an asynchronous property called `currentUser$` that returns an object representing the current user. Use its `userId` property in conjunction with a project’s `projectManagerId` property for the “Ranked Results” requirement.
