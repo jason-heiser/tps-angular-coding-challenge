@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  transform-origin: top left;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+* {
+  width: 500px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td[colspan='3'] {
+  background-color: #eee;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 5px 10px;
+}

@@ -1,0 +1,23 @@
+<h1>Hello, {{ userName$ | async }}!</h1>
+<label>
+  Project Filter
+  <input type="text" [formControl]="filterControl" placeholder="Type anything to search">
+</label>
+<h2>Project List</h2>
+<table *ngIf="filterResults$ | async as filterResults">
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Manager</th>
+  </tr>
+  <tr>
+    <td colspan="3">
+      {{ filterResults.length }} projects showing
+    </td>
+  </tr>
+  <tr *ngFor="let project of filterResults">
+    <td>{{ project.projectName }}</td>
+    <td>{{ project.projectSize }}</td>
+    <td>{{ project.projectManagerName }}</td>
+  </tr>
+</table>
