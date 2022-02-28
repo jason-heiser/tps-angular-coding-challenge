@@ -8,7 +8,7 @@ Clone this repo to your computer.
 
 `git clone https://github.com/jason-heiser/tps-angular-coding-challenge.git`
 
-If you do not have Node.js, [install it](https://nodejs.org/dist/v16.14.0/node-v16.14.0.pkg).
+If you do not have Node.js, [install it](https://nodejs.org/en/download/).
 
 Open the command line and `cd` to the `tps-angular-coding-challenge` folder and run  `npm install`.
 
