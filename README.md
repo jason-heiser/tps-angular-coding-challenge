@@ -12,12 +12,12 @@ If you do not have Node.js, [install it](https://nodejs.org/dist/v16.14.0/node-v
 
 Open the command line and `cd` to the `tps-angular-coding-challenge` folder and run  `npm install`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Existing Functionality
 In `AppComponent` there is a filtration interface that helps project managers find projects of interest to them.
 
-Presently it searches for projects by only the `projectName` field. If you type `omega` in the search field, you will see only one project: `Project Omega`.
+Presently it searches for projects by only the `projectName` field. If you type `omega` in the search field, you will see only one project: `Project Omega`
 
 The filtration mechanism performs partial string matches and is not case sensitive.
 
@@ -35,7 +35,7 @@ The entirety of your solution should not take more than one hour to develop and 
 
 You are free to change anything in this component but your solution should adopt the conventions established by the existing filtration functionality.
 
-Your solution should add no more than 20 lines of code to the file. Ideally, it will consist of fewer than ten lines.
+Your solution should add no more than 20 lines of code to the file.
 
 ### Hints
 
