@@ -36,8 +36,16 @@ export class AppComponent {
       map(filter => filter.trim().toUpperCase() as string),
     );
 
-    this.filterResults$ = combineLatest([projects$, filter$]).pipe(
-      map(([projects, filter]) => projects.filter(project => project.projectName.toUpperCase().indexOf(filter) !== -1 ))
+    const userId$ = userService.currentUser$.pipe(
+      map(currentUser => currentUser.userId)
+    );
+
+    this.filterResults$ = combineLatest([projects$, filter$, userId$]).pipe(
+      map(([projects, filter, userId]) => {
+        const check = (field: string) => field.toUpperCase().indexOf(filter) !== -1;
+        return projects.filter(project => [project.projectName, project.projectSize, project.projectManagerName].some(check))
+                       .sort(project => project.projectManagerId === userId ? -1 : 0)
+      })
     );
 
   }
