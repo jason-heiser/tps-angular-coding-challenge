@@ -49,4 +49,4 @@ The `UserService` has an asynchronous property called `currentUser$` that return
 
 ## Submitting Your Solution
 
-When you have solved the challenge, zip up the `src` folder inside this project and email it to jason.heiser@tripointsolutons.com.
+When you have solved the challenge, zip up the `src` folder inside this project and email it to jason.heiser@tripointsolutions.com.
